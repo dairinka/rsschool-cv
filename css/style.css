@@ -13,6 +13,7 @@
   --small-letter-spacing: 0.05em;
   --aside-width: 410px;
 }
+
 /*General settings*/
 html,
 h1,
@@ -25,9 +26,9 @@ li {
 }
 
 body {
+  position: relative;
   width: 1414px;
   margin:0 auto;
-
   font-family: 'Montserrat', sans-serif;
   font-size: var(--p-size);
   line-height: var(--p-line-height);
@@ -47,6 +48,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
 a:hover {
   text-shadow: 1px 1px 2px black, 0 0 25px #ffffff, 0 0 5px #6398A6;
 }
@@ -74,11 +76,47 @@ li::marker {
 }
 
 /* Header */
-.nav:before {
+.nav-menu {
+  position: absolute;
+  right: 60px;
+  top: 45px;
   content: url("../images/nav.png");
   width: 37px;
   height: 24px;
 }
+
+.nav:hover .dropdown{
+  display: block;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 45px;
+  min-width: 265px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  background-color: var(--white-color);
+}
+
+.nav-list li {
+  display: block;
+  width: 265px;
+  border-bottom: 1px solid var(--light-green-color);
+  margin: 0;
+}
+
+.nav-list a{
+  display: block;
+  padding: 18px 70px;
+}
+
+.dropdown a:hover {
+  background-color: var(--dark-green-color);
+  color: var(--white-color);
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -86,7 +124,6 @@ li::marker {
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
@@ -95,12 +132,10 @@ li::marker {
 
 .header-content {
   display: flex;
-
   height: 220px;
   margin-top: 100px;
   margin-bottom: 50px;
   padding: 40px;
-
   background-color: var(--light-green-color);
 }
 
@@ -112,7 +147,6 @@ li::marker {
   background-color: var(--dark-green-color);
 }
 
-
 .header-text > h1 {
   width: 770px;
   border-top: 2px solid var(--black-color);
@@ -122,9 +156,10 @@ li::marker {
   margin-top: 10px;
   letter-spacing: var(--big-letter-spacing);
 }
+
 .header-text > h1:hover {
   text-shadow:
-      4px 4px 0px rgba(179, 232, 245, 0.6);,
+      4px 4px 0px rgba(179, 232, 245, 0.6),
       7px 7px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -180,6 +215,10 @@ li::marker {
   color: var(--light-green-color);
 }
 
+.github-logo:hover {
+  content: url("../images/GitHub-Mark-32pxW.png");
+}
+
 /* central section  */
 .central-content {
   width: 780px;
@@ -199,11 +238,13 @@ li::marker {
 .education-list {
   list-style-type:none;
 }
+
 .education-list > li {
   display: flex;
   align-items:center;
   margin-bottom: 0;
 }
+
 .education-list-marker {
   content: url("../images/marker.png");
   height: 79px;
@@ -228,7 +269,6 @@ li::marker {
 }
 
 /* Footer */
-
 .footer {
   display: flex;
   width: 100%;
@@ -242,69 +282,82 @@ li::marker {
   width: var(--aside-width);
   margin-left: 40px;
 }
+
 .logo-wrapper a {
   display: inline-block;
   padding: 25px 100px;
 }
+
 .logo-wrapper a:hover {
   content: url("../images/rs_school_js_w.svg");
 }
 
 .footer-content {
-  flex:1 1 auto;
+  flex: 1 1 auto;
   text-align: center;
-  padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* padding-top: 25px; */
 }
 
 .footer-content p:first-child {
   font-weight: bold;
 }
 
+.footer-content p {
+  height: 32px;
+}
+
+.github-logo {
+  display: inline-block;
+  height: 32px;
+  margin: 0;
+}
+
 /* Animation */
 
 /* photo */
 @keyframes change-photo {
-  0% {content: url("../images/photo.png");}
-  50% {content: url("../images/photo2.png");}
-  100% {content: url("../images/photo.png");}
+  from {
+    content: url("../images/photo.png");
+  }
+  to {
+    content: url("../images/photo2.png");
+  }
 }
 
-@keyframes blur {
-  0% {
-    filter: blur(5px);
-  }
-  45% {
-    filter: blur(0);
-  }
-  60% {
-    filter: blur(5px);
-  }
-  100% {
-    filter: blur(0);
-  }
-}
 .photo:hover {
-  animation: change-photo 2s, blur 2s;
+  animation: change-photo 2s;
 }
 
 /* p letter-spacing */
-
 @keyframes letter-space {
-  0% {letter-spacing: var(--big-letter-spacing);}
-  75% {letter-spacing: normal;}
-  100% {letter-spacing: var(--big-letter-spacing);}
+  0% {
+    letter-spacing: var(--big-letter-spacing);
+  }
+  75% {
+    letter-spacing: normal;
+  }
+  100% {
+    letter-spacing: var(--big-letter-spacing);
+  }
 }
 
 .header-text > p:hover {
  animation: letter-space 1s;
 }
 
+/* progress image */
 @keyframes progress {
-  30% {content: url("../images/progress1.png");}
-  60% {content: url("../images/progress2.png");}
-  90% {content: url("../images/progress3.png");}
-
+  from {
+    content: url("../images/progress.png");
+  }
+  to {
+    content: url("../images/progress3.png");
+  }
 }
+
 .language-progress:hover {
-  animation: progress 0.06s;
+  animation: progress 1s ease-out;
 }

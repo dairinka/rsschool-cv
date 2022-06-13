@@ -12,8 +12,9 @@
 <body>
     <div class="wrapper">
       <header>
-          <nav class=" nav visually-hidden ">
-              <ul class="nav-list">
+          <nav class="nav">
+              <p class="nav-menu"></p>
+              <ul class="nav-list dropdown">
                   <li><a href="#about-me">About Me</a></li>
                   <li><a href="#contacts">Contacts</a></li>
                   <li><a href="#education">Education</a></li>
@@ -37,10 +38,10 @@
               <section class="contacts" id="contacts">
                   <h2>Contacts</h2>
                   <ul class="contacts-list">
-                      <li><a href="tel:+380506389487"><span class="contacts-name">Phone:</span><span class="contacts-item">+38(05)06389487</span></a></li>
-                      <li><a href="mailto:interest4me@gmail.com"><span class="contacts-name">Email:</span><span class="contacts-item">interest4me@gmail.com</span></a></li>
-                      <li><a href="https://github.com/dairinka" target="_blank"><span class="contacts-name">GitHub:</span><span class="contacts-item">@dairinka</span></a></li>
-                      <li><a href="https://discord.com/invite/PRADsJB" target="_blank"><span class="contacts-name">Discord:</span><span class="contacts-item">IrynaYe(@dairinka)</span></a></li>
+                      <li><span class="contacts-name">Phone:</span><a href="tel:+380506389487"><span class="contacts-item">+38(05)06389487</span></a></li>
+                      <li><span class="contacts-name">Email:</span><a href="mailto:interest4me@gmail.com"><span class="contacts-item">interest4me@gmail.com</span></a></li>
+                      <li><span class="contacts-name">GitHub:</span><a href="https://github.com/dairinka" target="_blank"><span class="contacts-item">@dairinka</span></a></li>
+                      <li><span class="contacts-name">Discord:</span><a href="https://discord.com/invite/PRADsJB" target="_blank"><span class="contacts-item">IrynaYe(@dairinka)</span></a></li>
                   </ul>
               </section>
               <section class="skills" id="skills">
@@ -95,11 +96,11 @@
       </main>
       <footer class="footer">
           <div class="logo-wrapper">
-            <a class="footer-rss-logo" href="https://rs.school/js/" target="_blank" rel="noopener nofollow noreferrer" ><img src="./images/rs_school_js.svg" alt="rsschool logo" width="200" height="72"></a>
+            <a class="footer-rss-logo" href="https://rs.school/js/" target="_blank" rel="noopener nofollow noreferrer" title="to rsschool"><img src="./images/rs_school_js.svg" alt="rsschool logo" width="200" height="72"></a>
           </div>
           <div class="footer-content">
               <p>2022</p>
-              <p><a href="https://github.com/dairinka" target="_blank">my GitHub</a></p>
+              <p><a class="github-logo" href="https://github.com/dairinka" target="_blank" title="welcome to my github"><img src="./images/GitHub-Mark-32px.png" alt="my github" width="32" height="32"></a></p>
           </div>
       </footer>
     </div>
