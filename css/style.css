@@ -117,19 +117,6 @@ li::marker {
   color: var(--white-color);
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 .header-content {
   display: flex;
   height: 220px;
@@ -158,9 +145,9 @@ li::marker {
 }
 
 .header-text > h1:hover {
-  text-shadow:
-      4px 4px 0px rgba(179, 232, 245, 0.6),
-      7px 7px 0px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(60deg,#ffffff, #539a77, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* main  */
@@ -294,11 +281,10 @@ li::marker {
 
 .footer-content {
   flex: 1 1 auto;
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* padding-top: 25px; */
+  text-align: center;
 }
 
 .footer-content p:first-child {
