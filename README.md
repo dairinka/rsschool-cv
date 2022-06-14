@@ -1,1 +1,1 @@
-# rsschool-cv
+https://dairinka.github.io/rsschool-cv/
