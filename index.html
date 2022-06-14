@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV | Iryna Yehorova</title>
+    <link rel="preload" href="./fonts/Montserrat-Regular.ttf" as="font">
+    <link rel="preload" href="./fonts/Montserrat-Bold.ttf" as="font">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+      <header>
+          <nav class="nav">
+              <p class="nav-menu"></p>
+              <ul class="nav-list dropdown">
+                  <li><a href="#about-me">About Me</a></li>
+                  <li><a href="#contacts">Contacts</a></li>
+                  <li><a href="#education">Education</a></li>
+                  <li><a href="#language">Language</a></li>
+                  <li><a href="#skills">Skills</a></li>
+                  <li><a href="#reference">Reference</a></li>
+              </ul>
+          </nav>
+          <div class="header-content">
+            <div class="img-wrapper">
+              <img class="photo" alt="my photo" src="./images/photo.png" width="320" height="335">
+            </div>
+            <div class="header-text">
+              <h1>Iryna <br> Yehorova</h1>
+              <p class="profession">Junior frontend developer</p>
+            </div>
+          </div>
+      </header>
+      <main class="main">
+          <aside class="aside">
+              <section class="contacts" id="contacts">
+                  <h2>Contacts</h2>
+                  <ul class="contacts-list">
+                      <li><span class="contacts-name">Phone:</span><a href="tel:+380506389487"><span class="contacts-item">+38(05)06389487</span></a></li>
+                      <li><span class="contacts-name">Email:</span><a href="mailto:interest4me@gmail.com"><span class="contacts-item">interest4me@gmail.com</span></a></li>
+                      <li><span class="contacts-name">GitHub:</span><a href="https://github.com/dairinka" target="_blank"><span class="contacts-item">@dairinka</span></a></li>
+                      <li><span class="contacts-name">Discord:</span><a href="https://discord.com/invite/PRADsJB" target="_blank"><span class="contacts-item">IrynaYe(@dairinka)</span></a></li>
+                  </ul>
+              </section>
+              <section class="skills" id="skills">
+                  <h2>Skills</h2>
+                  <ul class="skiils-list">
+                      <li>HTML5</li>
+                      <li>CSS3</li>
+                      <li>JavaScript</li>
+                      <li>Git</li>
+                      <li>Figma</li>
+                      <li>Photoshop</li>
+                  </ul>
+              </section>
+              <section class="reference" id="reference">
+                  <h2>Reference</h2>
+                  <ul class="reference-list">
+                      <li><a href="https://dairinka.github.io/rsschool-cv/" target="_blank">CV</a><span class="reference-line">&nbsp;|&nbsp;</span><a href="https://github.com/dairinka/rsschool-cv/tree/rsschool-cv-html" target="_blank">github</a></li>
+                      <li><a href="https://dairinka.github.io/goit-markup-hw-02/" target="_blank">WebStudio</a><span class="reference-line">&nbsp;|&nbsp;</span><a href="https://github.com/dairinka/goit-markup-hw-02" target="_blank">github</a></li>
+                      <li><a href="https://dairinka.github.io/gus/" target="_blank">Funny site </a><span class="reference-line">&nbsp;|&nbsp;</span><a href="https://github.com/dairinka/gus" target="_blank">github</a></li>
+                  </ul>
+              </section>
+          </aside>
+          <div class="central-content">
+            <section class="about" id="about-me">
+                <h2>About me</h2>
+                <p>I start to learn Front-End Development in RSSchool and also learn Ar Development in Laboratory of culture. I strive to have relevant knowledge, constantly learning. My goal is to master the chosen directions in order to feel like a duck to water. I completely immerse myself in the task and endeavor to find a solution. I like to share my knowledge and a teamwork.</p>
+            </section>
+            <section class="example">
+                <h2>Code example</h2>
+                <pre><code>function sum(a, b) {
+        return a + b;
+      }
+
+      let result = sum(1, 2);
+      alert(result);</code></pre>
+            </section>
+            <section class="education" id="education">
+                <h2>Education</h2>
+                <ul class="education-list">
+                    <li><span class="education-year">2022</span><span class="education-list-marker"></span><span class="education-li">RSSchool<br><span class="education-item">Front-End, stage 0</span></span></li>
+                    <li><span class="education-year">2022</span><span class="education-list-marker"></span><span class="education-li">GoIt<br><span class="education-item">Demo course (HTML5, CSS3)</span></span></li>
+                    <li><span class="education-year">2013</span><span class="education-list-marker"></span><span class="education-li">LearnJavascript.ru<br><span class="education-item">Basic Javascript</span></span></li>
+                    <li><span class="education-year">2012</span><span class="education-list-marker"></span><span class="education-li">Regional center of Technology in Kharkiv<br><span class="education-item">Web Designer (HTML, CSS, Photoshop)</span></span></li>
+                    <li><span class="education-year">2000</span><span class="education-list-marker"></span><span class="education-li">Kharkiv National University of Economics<br><span class="education-item">Specialist Degree in Economics</span></span></li>
+                </ul>
+            </section>
+            <section class="language" id="language">
+                <h2>Language</h2>
+                <p><span>English</span><span class="language-progress"></span><span>A2</span></p>
+            </section>
+          </div>
+      </main>
+      <footer class="footer">
+          <div class="logo-wrapper">
+            <a class="footer-rss-logo" href="https://rs.school/js/" target="_blank" rel="noopener nofollow noreferrer" title="to rsschool"><img src="./images/rs_school_js.svg" alt="rsschool logo" width="200" height="72"></a>
+          </div>
+          <div class="footer-content">
+              <p>2022</p>
+              <p><a class="github-logo" href="https://github.com/dairinka" target="_blank" title="welcome to my github"><img src="./images/GitHub-Mark-32px.png" alt="my github" width="32" height="32"></a></p>
+          </div>
+      </footer>
+    </div>
+</body>
+</html>
